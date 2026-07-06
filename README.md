@@ -1,7 +1,14 @@
-# Performance Ibrida v1.2
+# Performance Ibrida v1.3
 
-Correzione:
-- nel Giorno A il Conditioning ora compare correttamente in tutte le settimane;
-- le righe non settimanali come “Min 1” e “Min 2” non vengono più filtrate dal selettore W1-W8.
+Correzione cache/salvataggio:
+- cache busting su index/style/app/data;
+- service worker aggiornato a cache v1.3;
+- elimina automaticamente le vecchie cache;
+- pulsante Salva con conferma oraria;
+- mantiene la struttura v1.2 e il conditioning del Giorno A.
 
-Carica tutti i file nella root del repository e fai commit.
+Dopo il commit:
+1. attendi 2 minuti;
+2. apri il link GitHub Pages;
+3. ricarica 2 volte;
+4. verifica che in home compaia v1.3.

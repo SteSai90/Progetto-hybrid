@@ -28,7 +28,7 @@ function layout(content){
   app.innerHTML = `
     <div class="hero">
       <h1>${PROGRAM.appName}</h1>
-      <p>${PROGRAM.subtitle} • v1.2</p>
+      <p>${PROGRAM.subtitle} • v1.3</p>
       <div id="saveStatus" class="saveStatus">Salvataggio automatico attivo</div>
     </div>
     ${content}`;
@@ -160,7 +160,7 @@ function renderBlock(mId, dId, b, bi){
 
 function manualSave(){
   save();
-  alert("Dati salvati. Se chiudi e riapri dal link GitHub Pages, devono restare.");
+  localStorage.setItem(STORE_KEY + "_save_test", "ok_" + Date.now()); alert("Dati salvati alle " + new Date().toLocaleTimeString("it-IT") + ". Se non restano dopo riapertura, il browser sta caricando una versione in cache.");
 }
 
 function generateSessionReport(){
