@@ -28,7 +28,7 @@ function layout(content){
   app.innerHTML = `
     <div class="hero">
       <h1>${PROGRAM.appName}</h1>
-      <p>${PROGRAM.subtitle} • v1.1</p>
+      <p>${PROGRAM.subtitle} • v1.2</p>
       <div id="saveStatus" class="saveStatus">Salvataggio automatico attivo</div>
     </div>
     ${content}`;
@@ -99,14 +99,21 @@ function renderProgram(){
 }
 
 function findWeekText(rows){
-  // shows exact row for selected week, or grouped rows like W1-2 / W1-8 when relevant
+  // Mostra righe specifiche della settimana, intervalli tipo W1-2/W1-8
+  // e righe non settimanali tipo "Min 1", "Min 2" usate nei conditioning.
   return rows.filter(r => {
     const wk = r[0];
     if (wk === activeWeek) return true;
     if (wk === "W1-8") return true;
+
     const n = Number(activeWeek.replace("W",""));
     const m = wk.match(/^W(\d+)-(\d+)$/);
-    if(m) return n >= Number(m[1]) && n <= Number(m[2]);
+    if (m) return n >= Number(m[1]) && n <= Number(m[2]);
+
+    // Se la label non inizia con W, è una riga sempre valida
+    // esempio: Min 1, Min 2, Note, Circuito.
+    if (!wk.startsWith("W")) return true;
+
     return false;
   });
 }

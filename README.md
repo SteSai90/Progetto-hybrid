@@ -1,10 +1,7 @@
-# Performance Ibrida v1.1
+# Performance Ibrida v1.2
 
-Modifiche:
-- selettore settimana W1-W8;
-- durata, RPE seduta, peso e note salvati per settimana;
-- pulsante Salva ora;
-- report seduta copiabile;
-- salvataggio rinforzato su input, change, chiusura pagina e cambio visibilità.
+Correzione:
+- nel Giorno A il Conditioning ora compare correttamente in tutte le settimane;
+- le righe non settimanali come “Min 1” e “Min 2” non vengono più filtrate dal selettore W1-W8.
 
-Carica questi file nel repository sostituendo quelli esistenti.
+Carica tutti i file nella root del repository e fai commit.
