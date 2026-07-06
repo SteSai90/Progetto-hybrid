@@ -1,6 +1,10 @@
-# Performance Ibrida
+# Performance Ibrida v1.1
 
-App PWA personale per il progetto ATHX.
+Modifiche:
+- selettore settimana W1-W8;
+- durata, RPE seduta, peso e note salvati per settimana;
+- pulsante Salva ora;
+- report seduta copiabile;
+- salvataggio rinforzato su input, change, chiusura pagina e cambio visibilità.
 
-## Deploy GitHub Pages
-Carica tutti i file nella root del repository, poi vai su Settings → Pages → Deploy from branch → main / root.
+Carica questi file nel repository sostituendo quelli esistenti.
